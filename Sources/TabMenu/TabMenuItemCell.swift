@@ -124,6 +124,7 @@ extension TabMenuItemCell {
         guard let options = self.options else {
             return
         }
+        
         self.itemLabel.font = options.highlightedFont
         self.itemLabel.textColor = UIColor.interpolate(
             from: options.menuTitleColor,
@@ -136,6 +137,7 @@ extension TabMenuItemCell {
             return
         }
 
+        self.itemLabel.font = options.font
         self.itemLabel.textColor = UIColor.interpolate(
             from: options.menuTitleSelectedColor,
             to: options.menuTitleColor,
