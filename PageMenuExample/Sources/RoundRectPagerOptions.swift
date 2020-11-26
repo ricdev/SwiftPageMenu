@@ -10,7 +10,11 @@ import Foundation
 import SwiftPageMenu
 
 struct RoundRectPagerOption: PageMenuOptions {
-
+    
+    var highlightedFont: UIFont {
+        return UIFont.systemFont(ofSize: UIFont.systemFontSize)
+    }
+    
     var isInfinite: Bool = false
 
     var tabMenuPosition: TabMenuPosition = .top

@@ -77,6 +77,8 @@ public protocol PageMenuOptions {
     var isInfinite: Bool { get }
 
     var font: UIFont { get }
+    
+    var highlightedFont: UIFont { get }
 
     var menuItemSize: PageMenuItemSize { get }
 
@@ -117,6 +119,10 @@ extension PageMenuOptions {
 }
 
 public struct DefaultPageMenuOption: PageMenuOptions {
+    
+    public var highlightedFont: UIFont {
+        return UIFont.systemFont(ofSize: UIFont.systemFontSize)
+    }
 
     public var menuItemSize: PageMenuItemSize {
        return .sizeToFit(minWidth: 80, height: 30)

@@ -33,6 +33,10 @@ struct UnderlinePagerOption: PageMenuOptions {
         return UIFont.systemFont(ofSize: UIFont.systemFontSize)
     }
     
+    var highlightedFont: UIFont {
+        return UIFont.systemFont(ofSize: UIFont.systemFontSize + 4)
+    }
+    
     var menuItemMargin: CGFloat {
         return 8
     }
