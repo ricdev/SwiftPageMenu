@@ -45,8 +45,9 @@ class UnderlineCursorView: UIView, TabMenuItemCursor {
     func updateWidth(width: CGFloat) {
         if UIDevice.current.userInterfaceIdiom == .phone {
             self.currentBarViewWidthConstraint?.constant = width - 32
+        } else {
+            self.currentBarViewWidthConstraint?.constant = width - 58
         }
-        self.currentBarViewWidthConstraint?.constant = width - 116 // 58
     }
 
     func updatePosition(x: CGFloat) {
